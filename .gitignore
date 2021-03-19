@@ -1,0 +1,9 @@
+# Idea
+.idea
+
+# Dependencies
+vendor
+composer.lock
+
+# PHP CS Fixer
+.php_cs.cache

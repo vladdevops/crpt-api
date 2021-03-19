@@ -1,0 +1,34 @@
+{
+    "name": "vladdevops/crpt-api",
+    "description": "https://честныйзнак.рф API",
+    "keywords": [
+        "http",
+        "Маркировка",
+        "crpt",
+        "API ГИС МТ",
+        "Црпт",
+        "Честный знак",
+        "Государственная информационная система мониторинга товаров"
+    ],
+    "authors": [
+        {
+            "name": "Ustinov Vladislav",
+            "email": "vladdevops@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CrptApi\\": "src/"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "php": "^5 || ^7",
+        "guzzlehttp/guzzle": "^6",
+        "lcobucci/jwt": "^3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2"
+    }
+}
