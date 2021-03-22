@@ -32,7 +32,7 @@ trait IsmpTrueApiAuthTrait
      */
     public function getAuthData()
     {
-        $response = json_decode($this->httpClient->get($this->getUrl('/auth/key'))->getBody(), true);
+        $response = json_decode($this->httpClient->get($this->getUrl('auth/key'))->getBody(), true);
         if (!$response || !isset($response['data'])) {
             throw new Exception('Невозможно получить данные для подписи для аутентификации в ЦРПТ');
         }
