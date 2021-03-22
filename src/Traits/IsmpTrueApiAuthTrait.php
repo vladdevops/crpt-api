@@ -2,12 +2,12 @@
 
 namespace CrptApi\Traits;
 
-use \Exception;
 use CrptApi\AuthData;
 use CrptApi\Exception\AuthSignInException;
 use CrptApi\Exception\NotAuthException;
 use CrptApi\Exception\TokenExpiredException;
 use CrptApi\JWT;
+use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
