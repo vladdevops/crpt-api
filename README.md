@@ -1,4 +1,6 @@
-Реализация API для работы с сайтом Честныйзнак
+Реализация API, на основе [True API версии 17.2 от 19.03.2021](https://xn--80ajghhoc2aj1c8b.xn--p1ai/upload/TRUE_API.pdf), для работы с сайтом [честныйзнак.рф](https://xn--80ajghhoc2aj1c8b.xn--p1ai/)
+
+[Глоссарий](GLOSSARY.md)
 
 ## Установка
 
@@ -14,14 +16,15 @@ composer require vladdevops/crpt-api
 
 ```php
 <?php
-use CrptApi\CrptApi;
+
+use CrptApi\IsmpTrueApi;
 
 $test = true;
 
-$crptApi = new CrptApi($this->test);
+$ismpApi = new IsmpTrueApi($test);
 
 try {    
-    $authData = $crptApi->getAuthData();
+    $authData = $ismpApi->getAuthData();
 
     $uuid = $authData->getUuid();
     $data = $authData->getData();
@@ -36,17 +39,18 @@ try {
 
 ```php
 <?php
-use CrptApi\CrptApi;
+
+use CrptApi\IsmpTrueApi;
 
 $test = true;
 
-$crptApi = new CrptApi($this->test);
+$ismpApi = new IsmpTrueApi($test);
 
 $uuid = '<uuid полученный из getAuthData>';
 $signed = '<Подписанные данные в base64 (ЭП присоединенная)>';
 
 try {    
-    $jwt = $crptApi->checkAuthData($uuid, $signed);
+    $jwt = $ismpApi->getAuthToken($uuid, $signed);
 
     $token = $jwt->getToken();
 } catch (\Exception $e) {

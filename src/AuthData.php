@@ -9,10 +9,10 @@ class AuthData
 {
 
     /* @var string Строка из нескольких байт, которую нужно подписать */
-    private $data;
+    protected $data;
 
     /* @var string Идентификатор запроса, который нужно вернуть */
-    private $uuid;
+    protected $uuid;
 
     public function __construct(array $response)
     {

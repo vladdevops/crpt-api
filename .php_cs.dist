@@ -1,7 +1,7 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->exclude(['bootstrap', 'node_modules', 'public', 'storage', 'vendor'])
+    ->exclude(['vendor'])
     ->notPath('*')
     ->in(__DIR__);
 
@@ -26,8 +26,11 @@ return PhpCsFixer\Config::create()
         'no_closing_tag' => true,
         'no_spaces_after_function_name' => true,
         'no_spaces_inside_parenthesis' => true,
+        'no_leading_import_slash' => true,
         'no_trailing_whitespace' => true,
         'no_trailing_whitespace_in_comment' => true,
+        'no_unused_imports' => true,
+        'ordered_imports' => true,
         'single_blank_line_at_eof' => true,
         'single_class_element_per_statement' => [
            'elements' => ['property'],

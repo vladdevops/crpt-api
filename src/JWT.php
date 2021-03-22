@@ -2,10 +2,10 @@
 
 namespace CrptApi;
 
+use DateTimeImmutable;
+use Exception;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Token\DataSet;
-use \DateTimeImmutable;
-use \Exception;
 
 /**
  * Токен авторизации
@@ -14,9 +14,9 @@ class JWT
 {
 
     /* @var string Токен */
-    private $token;
+    protected $token;
     /* @var DataSet Данные токена */
-    private $data;
+    protected $data;
 
     public function __construct($token)
     {
